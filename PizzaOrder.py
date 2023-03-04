@@ -171,9 +171,9 @@ islem_suresi=now2-now1
 
     
 #CSV DOSYASI OLUŞTURULUR VE BİLGİLER ORADA TUTULUR.
-with open('Orders_Database.csv', 'a') as db_file:
-        db_writer = csv.writer(db_file)
-        db_writer.writerow(["isim: ",isim ,"\nTc no: ",tc_no,"\nPizza türü: " ,sos.get_description(),"\nTutar: ", toplam_tutar, "\nKart no: ",kart_no,"\nKart şifresi: " ,kart_sifre,"\nİşlem süresi: ",islem_suresi,"\ntarih: ",tarih])
+with open('Orders_Database.csv', 'a') as database:
+        veriler = csv.writer(database)
+        veriler.writerow(["isim: ",isim ,"\nTc no: ",tc_no,"\nPizza türü: " ,sos.get_description(),"\nTutar: ", toplam_tutar, "\nKart no: ",kart_no,"\nKart şifresi: " ,kart_sifre,"\nİşlem süresi: ",islem_suresi,"\ntarih: ",tarih])
     
 print(f'\n{sos.get_description()} siparişiniz alınmıştır. Bizi tercih ettiğin için teşekkürler {isim}!')
 
